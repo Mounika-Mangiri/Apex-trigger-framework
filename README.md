@@ -1,5 +1,7 @@
 # Apex Trigger Framework
 
+[![CI](https://github.com/Mounika-Mangiri/Apex-trigger-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/Mounika-Mangiri/Apex-trigger-framework/actions/workflows/ci.yml)
+
 A small, dependency-free trigger handler framework for Salesforce: one trigger per object, one handler class per object, plus a kill switch, a bypass API and a loop breaker. Includes an Account handler that normalizes U.S. phone numbers and ZIP codes.
 
 > **Representative portfolio project.** Written independently to show the trigger patterns used on enterprise orgs. It contains no employer or client code. The design follows widely used open patterns (one trigger per object, handler base class, custom-metadata switches).
@@ -61,6 +63,8 @@ sf apex run test --code-coverage --result-format human --wait 20
 ```
 
 ## Tests
+
+CI runs on every push: Prettier (parses every Apex class and trigger) and PMD static analysis. The `apex-tests` job deploys to a scratch org and runs the Apex tests below only when a Dev Hub auth URL is saved as the `SFDX_AUTH_URL` repository secret; until then it is skipped.
 
 | Suite | Count | Covers |
 | --- | --- | --- |
