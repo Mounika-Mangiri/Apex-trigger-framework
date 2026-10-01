@@ -1,0 +1,14 @@
+{
+  "name": "apex-trigger-framework",
+  "private": true,
+  "version": "1.0.0",
+  "description": "apex-trigger-framework - Salesforce portfolio project",
+  "scripts": {
+    "prettier:check": "prettier --check \"force-app/**/*.{cls,trigger,js,html,json}\"",
+    "prettier": "prettier --write \"force-app/**/*.{cls,trigger,js,html,json}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-apex": "^2.3.0"
+  }
+}
